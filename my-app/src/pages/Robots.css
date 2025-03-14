@@ -12,8 +12,6 @@
     border-radius: 10px;
 }
 
-
-
 /* Layout: Table + Details Side by Side */
 .content {
     display: flex;
@@ -23,32 +21,47 @@
     margin: auto;
 }
 
-/* Table Styling */
+/* Table Positioning */
 .robots-table {
-    width: 60%;
-    /* Reduced width slightly to leave more space */
-    margin: 20px auto 20px 5%;
-    /* Moves table further left */
+    width: 65%;
+    margin-left: 5%;
     border-collapse: collapse;
     background-color: white;
     border-radius: 10px;
-    /* Rounded corners */
     padding: 15px;
-    /* Inner spacing */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow */
 }
 
 .robots-table th,
 .robots-table td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
 }
 
 .robots-table th {
     background-color: black;
     color: white;
+}
+
+/* Robot Details Section */
+.robot-details {
+    width: 30%;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Ensure Robot Image Displays Properly */
+.robot-image-large {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
 /* Footer */

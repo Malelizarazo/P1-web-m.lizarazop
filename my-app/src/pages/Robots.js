@@ -31,7 +31,13 @@ function Robots() {
     try {
       const response = await fetch(`http://localhost:3001/robots/${robotId}`);
       if (response.ok) {
-        const data = await response.json();
+        let data = await response.json();
+
+        // Fix image URL (GitHub to raw link)
+        if (data.imagen.includes("github.com") && data.imagen.includes("blob")) {
+          data.imagen = data.imagen.replace("blob/", "raw/");
+        }
+
         setSelectedRobot(data);
       } else {
         console.error("Failed to fetch robot details");
