@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import "./Robots.css";
 
 function Robots() {
   const [robots, setRobots] = useState([]);
   const [selectedRobot, setSelectedRobot] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchRobots = async () => {
@@ -49,6 +52,7 @@ function Robots() {
 
   return (
     <div className="robots-container">
+      <LanguageSwitcher />
       <h1>Adopta un Robot con Robot Lovers!</h1>
       <img src="/image.png" alt="Robots" className="banner-image" />
 
@@ -61,7 +65,7 @@ function Robots() {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Nombre</th>
+                <th>{t('table.name')}</th>
                 <th>Modelo</th>
                 <th>Empresa Fabricante</th>
               </tr>
@@ -84,9 +88,9 @@ function Robots() {
           <div className="robot-details">
             <h2>{selectedRobot.nombre}</h2>
             <img src={selectedRobot.imagen} alt={selectedRobot.nombre} className="robot-image-large" />
-            <p><strong>➜ Año de Fabricación:</strong> {selectedRobot.añoFabricacion}</p>
-            <p><strong>➜ Capacidad de Procesamiento:</strong> {selectedRobot.capacidadProcesamiento}</p>
-            <p><strong>➜ Humor:</strong> {selectedRobot.humor}</p>
+            <p><strong>➜ {t('table.manufacturingYear')}:</strong> {selectedRobot.añoFabricacion}</p>
+            <p><strong>➜ {t('table.processingCapacity')}:</strong> {selectedRobot.capacidadProcesamiento}</p>
+            <p><strong>➜ {t('table.additionalFeatures')}:</strong> {selectedRobot.humor}</p>
           </div>
         )}
       </div>
