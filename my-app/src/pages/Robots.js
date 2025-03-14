@@ -8,25 +8,24 @@ function Robots() {
   const navigate = useNavigate();
 
   useEffect(() => {
-  const fetchRobots = async () => {
-    try {
-      const response = await fetch("http://localhost:3001/robots"); // Updated URL
-      if (response.ok) {
-        const data = await response.json();
-        setRobots(data);
-      } else {
-        console.error("Failed to fetch robots");
+    const fetchRobots = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/robots");
+        if (response.ok) {
+          const data = await response.json();
+          setRobots(data);
+        } else {
+          console.error("Failed to fetch robots");
+        }
+      } catch (error) {
+        console.error("Error fetching robots:", error);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error("Error fetching robots:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
 
-  fetchRobots();
-}, []);
-
+    fetchRobots();
+  }, []);
 
   return (
     <div className="robots-container">
@@ -49,9 +48,9 @@ function Robots() {
             {robots.map((robot) => (
               <tr key={robot.id}>
                 <td>{robot.id}</td>
-                <td>{robot.name}</td>
-                <td>{robot.model}</td>
-                <td>{robot.manufacturer}</td>
+                <td>{robot.nombre}</td>  {/* API uses "nombre" */}
+                <td>{robot.modelo}</td>   {/* API uses "modelo" */}
+                <td>{robot.empresaFabricante}</td> {/* API uses "empresaFabricante" */}
               </tr>
             ))}
           </tbody>

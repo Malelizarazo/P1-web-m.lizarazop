@@ -3,6 +3,7 @@
     padding: 20px;
 }
 
+/* Banner Styling */
 .banner-image {
     width: 80%;
     max-width: 600px;
@@ -11,16 +12,21 @@
     border-radius: 10px;
 }
 
+/* Table Styling */
 .robots-table {
-    width: 80%;
+    width: 70%;
+    /* Covers 70% of the screen */
     margin: 20px auto;
+    /* Centers it */
     border-collapse: collapse;
+    background-color: white;
 }
 
 .robots-table th,
 .robots-table td {
     border: 1px solid black;
     padding: 10px;
+    text-align: center;
 }
 
 .robots-table th {
@@ -28,11 +34,7 @@
     color: white;
 }
 
-.loading-text {
-    font-size: 18px;
-    font-weight: bold;
-}
-
+/* Footer */
 .footer {
     margin-top: 20px;
     font-size: 14px;
