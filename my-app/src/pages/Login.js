@@ -33,7 +33,7 @@ function Login() {
   return (
     <div className="login-container">
       <h1>Adopta un Robot con Robot Lovers!</h1>
-      <img src="https://your-image-url.com/robots.png" alt="Robots" className="banner-image" />
+      <img src="/image.png" alt="Robots" className="banner-image" />
 
       <form onSubmit={handleSubmit} className="login-form">
         <h2>Inicio de sesión</h2>
@@ -63,7 +63,7 @@ function Login() {
 
         <div className="button-group">
           <button type="submit" className="btn btn-primary">Ingresar</button>
-          <button type="button" className="btn btn-danger" onClick={() => setUsername("") & setPassword("")}>
+          <button type="button" className="btn btn-danger" onClick={() => { setUsername(""); setPassword(""); }}>
             Cancelar
           </button>
         </div>
@@ -73,5 +73,6 @@ function Login() {
     </div>
   );
 }
+
 
 export default Login;

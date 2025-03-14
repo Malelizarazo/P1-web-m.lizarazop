@@ -1,0 +1,39 @@
+.robots-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+    border: 3px solid pink;
+    border-radius: 10px;
+}
+
+.robots-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.robots-table th,
+.robots-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.robots-table th {
+    background-color: black;
+    color: white;
+}
+
+.loading-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
