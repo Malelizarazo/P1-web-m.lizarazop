@@ -14,12 +14,18 @@
 
 /* Table Styling */
 .robots-table {
-    width: 70%;
-    /* Covers 70% of the screen */
-    margin: 20px auto;
-    /* Centers it */
+    width: 60%;
+    /* Reduced width slightly to leave more space */
+    margin: 20px auto 20px 5%;
+    /* Moves table further left */
     border-collapse: collapse;
     background-color: white;
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 15px;
+    /* Inner spacing */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
 }
 
 .robots-table th,
