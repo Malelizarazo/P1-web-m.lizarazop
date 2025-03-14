@@ -1,0 +1,40 @@
+.login-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-image {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px 0;
+    border: 3px solid pink;
+    border-radius: 10px;
+}
+
+.login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    width: 48%;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
