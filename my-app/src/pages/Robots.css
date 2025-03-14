@@ -12,6 +12,17 @@
     border-radius: 10px;
 }
 
+
+
+/* Layout: Table + Details Side by Side */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+}
+
 /* Table Styling */
 .robots-table {
     width: 60%;
